@@ -1,0 +1,17 @@
+{
+	"private": true,
+	"devDependencies": {
+		"gulp": "^3.9.0"
+	},
+	"dependencies": {
+		"laravel-elixir": "^3.0.0",
+		"backbone": "1.2.3",
+		"underscore": "1.8.3",
+		"jquery": "2.2.0",
+		"bootstrap": "3.3.6"
+	},
+	"scripts": {
+		"build": "/usr/bin/env node ./node_modules/gulp/bin/gulp.js --production",
+		"postinstall": "/usr/bin/env npm run build"
+	}
+}
