@@ -7,6 +7,8 @@ For testing basic conceptions of Backbone it was created some simple tests:
 * /resources/assets/js/events.js - for implementing of work with Events,
 * /resources/assets/js/router.js - for implementing of work with Router,
 * /resources/assets/js/view.js - for implementing of work with Views
+
+
 First you have to configure .env file specifying the database parameters. Help - https://laravel.com/docs/5.1/installation#basic-configuration
 
 Then please run next commands:
