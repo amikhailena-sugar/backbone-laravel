@@ -16,7 +16,7 @@ runApp.class_method({
 			'click .btn': 'runTest'
 		},
 		'runTest': function(){
-			console.log('Test have been runned!');
+			console.log('Test has been runned!');
 		}
 	});
 	return new SomeView({'el': $('#container')});
