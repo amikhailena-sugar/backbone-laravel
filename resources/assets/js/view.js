@@ -1,4 +1,5 @@
 runApp.class_method({
+// Simple test of Backbone View
 'test_view': function(){
 	var SomeView = Backbone.View.extend({
 		'options': {

@@ -1,4 +1,5 @@
 runApp.class_method({
+// Init Router
 'app_routes': (function(){
 	var AppRoutes = Backbone.Router.extend({
 		'routes': {

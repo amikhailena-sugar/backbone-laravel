@@ -1,27 +1,27 @@
-## Laravel PHP Framework
+This is a simple application which has been written on Laravel 5.1 as a backend platform and has got a simple REST API for implementing home Library.
+Backbone 1.2.3 has been used as a frontend framework. For testing basic conceptions of Backbone it was created some simple tests:
+/resources/assets/js/collection.js - for implementing of work with Collections,
+/resources/assets/js/model.js - for implementing of work with Models,
+/resources/assets/js/events.js - for implementing of work with Events,
+/resources/assets/js/router.js - for implementing of work with Router,
+/resources/assets/js/view.js - for implementing of work with Views
+First you have to configure .env file specifying the database parameters. Help - https://laravel.com/docs/5.1/installation#basic-configuration
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Then please run next commands:
+```shell
+$ composer install
+$ npm install
+$ php artisan migrate
+```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+All test you can see on this address - /tests.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Open console in your browser and run the tests:
+```javascript
+runApp.test_events();
+runApp.test_model();
+runApp.test_collection();
+runApp.test_view();
+```
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Router is running automatically, you just have to change the address adding #test or #test/param
