@@ -21,7 +21,8 @@ elixir(function(mix) {
         baseModulesPath + 'jquery/dist/jquery.min.js',
         baseModulesPath + 'underscore/underscore-min.js',
         baseModulesPath + 'backbone/backbone-min.js',
-        baseModulesPath + 'bootstrap/dist/js/bootstrap.min.js'
+        baseModulesPath + 'bootstrap/dist/js/bootstrap.min.js',
+        'core.js'
     ], 'public/js/app.js');
     mix.scripts([
         'events.js',

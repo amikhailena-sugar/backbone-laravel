@@ -1,4 +1,5 @@
-(function(){
+runApp.class_method({
+'test_events': function(){
 	// Listening Models event after initialization
 	Backbone.Events.once('custom-book-inited', function(msg){
 		console.log('MSG:' + msg);
@@ -22,4 +23,4 @@
 	myObject2.trigger('event3');
 	(myObject1.stopListening(myObject2), myObject2.trigger('event3'));
 	(myObject1.off(), myObject1.trigger('event1'));
-})();
+}});

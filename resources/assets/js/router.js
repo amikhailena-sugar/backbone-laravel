@@ -1,4 +1,5 @@
-(function(){
+runApp.class_method({
+'app_routes': (function(){
 	var AppRoutes = Backbone.Router.extend({
 		'routes': {
 			'test': 'testRoute',
@@ -10,4 +11,5 @@
 	});
 	var myAppRouter = new AppRoutes();
 	Backbone.history.start();
-})();
+	return myAppRouter;
+})() });

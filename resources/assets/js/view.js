@@ -1,4 +1,5 @@
-(function(){
+runApp.class_method({
+'test_view': function(){
 	var SomeView = Backbone.View.extend({
 		'options': {
 			'title': 'Test'
@@ -18,4 +19,4 @@
 		}
 	});
 	return new SomeView({'el': $('#container')});
-})();
+} });
