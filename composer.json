@@ -29,20 +29,20 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "/opt/php-5.6/bin/php artisan clear-compiled",
-            "/opt/php-5.6/bin/php artisan optimize"
+            "php artisan clear-compiled",
+            "php artisan optimize"
         ],
         "pre-update-cmd": [
-            "/opt/php-5.6/bin/php artisan clear-compiled"
+            "php artisan clear-compiled"
         ],
         "post-update-cmd": [
-            "/opt/php-5.6/bin/php artisan optimize"
+            "php artisan optimize"
         ],
         "post-root-package-install": [
-            "/opt/php-5.6/bin/php -r \"copy('.env.example', '.env');\""
+            "php -r \"copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "/opt/php-5.6/bin/php artisan key:generate"
+            "php artisan key:generate"
         ]
     },
     "config": {
