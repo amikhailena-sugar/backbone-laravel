@@ -7,6 +7,12 @@ runApp.class_method({
 			'urlRoot': '/api/v1/books',
 			'initialize': function(){
 				Backbone.Events.trigger('custom-book-inited', 'I have been initialized!');
+			},
+			'validate': function(attrs, options){
+				var mainOptions=['title', 'author', 'language', 'publication_date'];
+				for(var i=0; i< mainOptions.length; i++)
+					if(!(attrs.hasOwnProperty(mainOptions[i]) && !!attrs[mainOptions[i]]))
+						return mainOptions[i]+' is undefined';
 			}
 		});
 		// Create new Book
@@ -15,13 +21,19 @@ runApp.class_method({
 			'author': 'Mark Twain',
 			'language': 'English'
 		});
+		// If the book is invalid - print a message
+		newBook.on('invalid', function(model, error){
+			console.log('Book is invalid: ' + error);
+		});
+		// Try to save
+		newBook.save();
 		// Forgot about publication date
 		newBook.set('publication_date', '1884-12-10');
 		//  POST /books - create on server
 		newBook.save(undefined, {'success': function(model, res){
 			res = res || {};
 			model.set('id', res.id);
-			console.log(model);
+			console.log(model.toJSON());
 			//  DEL /books/{id} - delete our book
 			model.destroy();
 		}});
